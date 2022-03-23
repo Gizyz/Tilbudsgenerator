@@ -9,6 +9,7 @@ var outEl = document.getElementById("output");
 
 formEl.addEventListener('submit', function(e){
     e.preventDefault();
+    
     var prodValg = []
     var rabbat = (formEl.rabbat.value/100)
     var avslag = 0
@@ -39,36 +40,31 @@ formEl.addEventListener('submit', function(e){
     console.log(avslag)
     var text1 = ""   
     for(var i=0; i<prodValg.length;i++){
-        if(prodValg.length == 1){
-            text1 = "\n"+prodValg[i].prod +" "+ prodValg[i].val +" kr";
-        }else {
-            text1 += "\n"+prodValg[i].prod +" "+ prodValg[i].val +" kr";
+        if(i == 0){
+            text1 = prodValg[i].prod;}
+        else {
+            text1 += " og " +prodValg[i].prod;
         }
     }
     var text2 = ""
     for(var i=0; i<prodValg.length;i++){
-        if(prodValg.length == 1){
-            text1 = "\n"+prodValg[i].prod +" "+ prodValg[i].val +" kr";
-        }else {
-            text1 += "\n"+prodValg[i].prod +" "+ prodValg[i].val +" kr";
-        }
+        text2 += "\n"+prodValg[i].prod +" "+ prodValg[i].val +" kr";
     }
     console.log(text1)
+    console.log(text2)
 
 
 
-
-
-    "Hei " + formEl.mottakNavn.value + " og takk for en hyggelig telefonsamtale."
-"\nSender deg som avtalt tilbud på"
+    outEl.value = (
+"Hei " + formEl.mottakNavn.value + " og takk for en hyggelig telefonsamtale." +
+"\nSender deg som avtalt tilbud på" + text1 + 
 "\nPrisen vil da bli" +
-"\n<produkt1> <pris produkt 1> " + " kr" +
-"\n<produkt2> <pris produkt 2> " + " kr" +
+text2 +
 "\nosv" + 
-"\nRabatt" + formEl.rabbat.value +"%" + " Med et avslag på "+ avslag + " kr" + 
-"\nTotalt" + (sum-avslag) + " kr" +
+"\nRabatt " + formEl.rabbat.value +"%" + " Med et avslag på "+ avslag + " kr" + 
+"\nTotalt " + (sum-avslag) + " kr" +
 "\nDet er bare å svare på denne eposten hvis du har noen spørsmål." + 
-"\nMed vennlig hilsen " + formEl.sendNavn.value
+"\nMed vennlig hilsen " + formEl.sendNavn.value);
 });
 
 
