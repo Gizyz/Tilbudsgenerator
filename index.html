@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css\stylesheet.css" type="text/css" rel="stylesheet"">
+    <title>Tilbudsgenerator</title>
+</head>
+<body>
+    <div class="generator">
+        <h1>Tilbudsgenerator</h1>
+        <form>
+            <table>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Månedspris</th>
+                    <th>Engagnskost</th>
+                    <th>Sjekk</th>
+                </tr>
+                <tr>
+                    <td><label for="50mbit">Internett 50mbit</label></td>
+                    <td>399,00 kr</td>
+                    <td></td>
+                    <td><input name="50mbit" type="checkbox" value="399"></td>
+                </tr>
+                <tr>
+                    <td><label for="100mbit">Internett 100mbit</label></td>
+                    <td>599,00 kr</td>
+                    <td></td>
+                    <td><input name="100mbit" type="checkbox" value="599"></td>
+                </tr>
+                <tr>
+                    <td><label for="300mbit">Internett 300mbit</label></td>
+                    <td>799,00 kr</td>
+                    <td></td>
+                    <td><input name="300mbit" type="checkbox" value="799"></td>
+                </tr>
+                <tr>
+                    <td><label for="500mbit">Internett 500mbit</label></td>
+                    <td>999,00 kr</td>
+                    <td></td>
+                    <td><input name="500mbit" type="checkbox" value="999"></td>
+                </tr>
+                <tr>
+                    <td><label for="tvDekoder">Ekstra TV-dekoder</label></td>
+                    <td></td>
+                    <td>399,00 kr</td>
+                    <td><input name="tvDekoder" type="checkbox" value="399"></td>
+                </tr>
+                <tr>
+                    <td><label for="wifiExtend">Wifi-extender</label></td>
+                    <td></td>
+                    <td>499,00 kr</td>
+                    <td><input name="wifiExtend" type="checkbox" value="499"></td>
+                </tr>
+            </table>
+            <textarea id="output"></textarea>
+        </form>
+    </div>
+    <script src="js\script.js"></script>
+</body>
+</html>

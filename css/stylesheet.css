@@ -1,0 +1,19 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    
+}
+
+.generator {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    bottom:0px;
+    background-color: royalblue;
+    flex-direction: column;
+    align-items: center;
+}
