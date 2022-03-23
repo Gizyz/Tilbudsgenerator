@@ -11,6 +11,12 @@
     <div class="generator">
         <h1>Tilbudsgenerator</h1>
         <form>
+            <div class="navn">
+                <label for="navn">Senders navn:</label>
+                <input name="navn" type="text">
+                <label for="navn">Mottakers navn:</label>
+                <input name="navn" type="text">
+            </div>
             <table>
                 <tr>
                     <th>Produkt</th>
@@ -55,8 +61,9 @@
                     <td><input name="wifiExtend" type="checkbox" value="499"></td>
                 </tr>
             </table>
-            <textarea id="output"></textarea>
+            <input type="submit">
         </form>
+        <textarea id="output"></textarea>
     </div>
     <script src="js\script.js"></script>
 </body>
